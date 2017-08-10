@@ -188,9 +188,10 @@ def validate_language(language):
 
 if __name__ == '__main__':
     #PORT = 5000
+    PORT = int(os.environ.get('PORT', 33507))
 
     APP.run(
         debug=True,
-        #port=PORT,
+        port=PORT,
         host='0.0.0.0'
     )
