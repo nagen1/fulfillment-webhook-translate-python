@@ -22,8 +22,8 @@ with the Google Cloud Translation API enabled.
 
 import json
 import random
-from httplib import HTTPException
-from urllib2 import HTTPError, URLError
+from http.client import HTTPException
+from urllib.error import HTTPError, URLError
 
 from flask import Flask, jsonify, make_response, request
 from googleapiclient.discovery import build
