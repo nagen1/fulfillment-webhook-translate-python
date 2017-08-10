@@ -187,10 +187,10 @@ def validate_language(language):
     return lang_code
 
 if __name__ == '__main__':
-    PORT = 5000
+    #PORT = 5000
 
     APP.run(
         debug=True,
-        port=PORT,
+        #port=PORT,
         host='0.0.0.0'
     )
