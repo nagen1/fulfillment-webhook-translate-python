@@ -187,7 +187,7 @@ def validate_language(language):
     return lang_code
 
 if __name__ == '__main__':
-    PORT = 8080
+    PORT = 5000
 
     APP.run(
         debug=True,
