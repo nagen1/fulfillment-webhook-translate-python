@@ -21,6 +21,7 @@ with the Google Cloud Translation API enabled.
 """
 
 import json
+import os
 import random
 from http.client import HTTPException
 from urllib.error import HTTPError, URLError
