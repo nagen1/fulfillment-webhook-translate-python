@@ -49,7 +49,8 @@ LOG = APP.logger
 
 
 @APP.route('/')
-    return “Welcome… Home”
+def index():
+    return 'Welcome… Home'
 
 @APP.route('/webhook', methods=['POST'])
 def webhook():
