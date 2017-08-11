@@ -48,6 +48,9 @@ APP = Flask(__name__)
 LOG = APP.logger
 
 
+@APP.route(‘/‘)
+    return “Welcome… Home”
+
 @APP.route('/webhook', methods=['POST'])
 def webhook():
     """This method handles the http requests for the API.AI webhook
