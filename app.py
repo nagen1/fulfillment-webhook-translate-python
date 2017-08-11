@@ -48,7 +48,7 @@ APP = Flask(__name__)
 LOG = APP.logger
 
 
-@APP.route(‘/‘)
+@APP.route('/')
     return “Welcome… Home”
 
 @APP.route('/webhook', methods=['POST'])
