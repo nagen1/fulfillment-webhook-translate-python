@@ -41,6 +41,7 @@ from translate_response import (_TRANSLATE_ERROR, _TRANSLATE_INTO_W,
 # 1. Go to console.google.com create or use an existing project
 # 2. Enable the Cloud Translation API in the console for your project
 # 3. Create an API key in the credentials tab and paste it below
+
 API_KEY = 'AIzaSyBHptauTQGmwZVCjoOS7bc3kxg3b3l0CaU'
 TRANSLATION_SERVICE = build('translate', 'v2', developerKey=API_KEY)
 
@@ -62,6 +63,8 @@ def webhook():
     # Get request parameters
     req = request.get_json(silent=True, force=True)
     action = req.get('result').get('action')
+    with open('data.txt', 'w') as outfile:
+        json.dump(req, outfile)
 
     # Check if the request is for the translate action
     if action == 'translate.text':
