@@ -63,7 +63,7 @@ def webhook():
     # Get request parameters
     req = request.get_json(silent=True, force=True)
     action = req.get('result').get('action')
-    with open(os.path.join('data.txt', 'w')) as outfile:
+    with open('data.txt', 'w') as outfile:
         json.dump(req, outfile)
 
     # Check if the request is for the translate action
