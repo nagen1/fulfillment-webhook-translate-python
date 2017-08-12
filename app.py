@@ -67,7 +67,7 @@ def webhook():
         json.dump(req, outfile)
 
     # Check if the request is for the translate action
-    if action == 'translate.text':
+    if action == 'homebot-greetings':
         # Get the parameters for the translation
         text = req['result']['parameters'].get('text')
         source_lang = req['result']['parameters'].get('lang-from')
